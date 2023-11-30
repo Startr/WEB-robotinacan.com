@@ -89,7 +89,8 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+#For now we'll just commit it and not bother building in the cloud
+#dist
 
 # Gatsby files
 .cache/
