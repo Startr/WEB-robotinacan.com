@@ -1,4 +1,4 @@
-# 
+# [![Netlify Status](https://api.netlify.com/api/v1/badges/70cec665-3d2d-49f4-bef6-cd98bd7a7f3c/deploy-status)](https://app.netlify.com/sites/robotinacan/deploys)
 
 Robot in a Can home page
 
