@@ -1,0 +1,17 @@
+
+div(itemprop='offers' itemscope='' itemtype='http://schema.org/Offer')
+  meta(itemprop='priceCurrency' content='USD')
+  link(itemprop='availability' href='http://schema.org/InStock')
+  h2 Out of Stock
+  p.product-single__price.product-single__price-product-template
+    span.visually-hidden Regular price
+    s#ComparePrice-product-template $75.00
+    span.price.sale
+      span#ProductPrice-product-template(itemprop='price' content='60.0') $60.00 
+      span.product-price__sale-label.product-price__sale-label-product-template Sale
+  form.product-form.product-form-product-template(action='https://robotinacan.com/cart/add' method='post' enctype='multipart/form-data' data-section='product-template')
+    select#ProductSelect-product-template.product-form__variants.no-js(name='id' data-section='product-template')
+      option(selected='' value='33521842699') Default Title
+    .product-form__item.product-form__item--submit
+      button#AddToCart-product-template.btn.product-form__cart-submit.product-form__cart-submit--small(type='submit' name='add')
+        span#AddToCartText-product-template Add to cart

@@ -1,0 +1,36 @@
+header#site-header.site-header.--fullwidth
+  a#skip-nav.skip-nav.sr-only(href='#main') Skip to main content
+  .logo(itemprop='publisher' itemscope itemtype='https://schema.org/Organization')
+    a(href='/' itemprop='url')
+      img(src='/imgs/NewRobotLogo_190704_115x_2x.png' alt='Robot In A Can' itemprop='logo' style='padding: 1.2rem 0; width: 115px;')
+  .header-middle-area
+    nav#main-nav.main-nav(role='navigation' aria-label='Main Navigation' style='flex-basis: 0;')
+      ul
+        li
+          a(href='/index~.html') Home
+        li
+          a(href='/pages/education') Education
+        li
+          a(href='/products/robot-in-a-can.html')
+            span(style='--d-md: none') The 
+            span Kit
+        li
+          a(href='/pages/support.html') Support
+        li(style='--d-md: none')
+          a(href='/blog/news/') Blog
+  .search-and-account(style='--d-md: none')
+    nav#account-nav.account-nav(role='navigation' aria-label='Account Navigation')
+      ul
+        li
+          a(href='/account/login')
+            i(data-feather='user')
+            .sr-only Log In
+        li
+          a.search-filter__link(href='https://www.google.com/search?q=site:robotinacan.com' target='_blank' rel='noopener noreferrer')
+            i(data-feather='search')
+            .sr-only Search
+        li
+          a(href='/cart') 
+            i(data-feather='shopping-cart')
+            .sr-only Cart
+hr(style='margin: 0;')

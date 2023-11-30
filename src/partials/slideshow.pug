@@ -1,0 +1,47 @@
+// TODO add animations
+.slideshow.row.--fullwidth
+  .column
+    .slide(style="--bgi: url('/imgs/Blue-Students_190704_2048x.webp'); --bgp: top;")
+      .text-wrap.overlay
+      .text-content
+        h4.h3 Designed for exploration
+        p
+          | Quick to setup and easy to use, start exploring the world of technology
+          | in the classroom or at home
+        a.button(href='/pages/education.html' type='submit' name='Learn%20More')
+          span.newsletter__submit-text--large Learn More
+    .slide(style="--bgi: url('/imgs/Blue-Students_190704_2048x.webp'); --bgp: top;")
+      .text-wrap.overlay
+      .text-content
+        h4.h3 Educational Experiences
+        p
+          | At Robot in a Can, we provide unforgettable experiences that put art and
+          | design at the centre of technology education.
+        a.button(href='/pages/education.html' type='submit' name='Learn%20More')
+          span.newsletter__submit-text--large Learn More
+.sr-only.row
+  .column.controlls
+    .controll.controll--prev
+      .controll-icon
+        i.controll-icon--prev(data-feather='chevron-left')
+    .controll.controll--next
+      .controll-icon
+        i.controll-icon--next(data-feather='chevron-right')
+  .row
+  .column
+    .controll.controll--play
+      .controll-icon
+        i.controll-icon--play(data-feather='play')
+    .controll.controll--pause
+      .controll-icon
+        i.controll-icon--pause(data-feather='pause')
+  .row
+  .column
+    .controll.controll--fullscreen
+      .controll-icon
+        i.controll-icon--fullscreen(data-feather='maximize-2')
+    .controll.controll--exit-fullscreen
+      .controll-icon
+        i.controll-icon--exit-fullscreen(data-feather='minimize-2')
+
+

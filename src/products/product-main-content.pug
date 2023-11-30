@@ -1,0 +1,13 @@
+main#MainContent.main-content(role='main')
+  #shopify-section-product-template.shopify-section
+    #ProductSection-product-template.product-template__container.page-width(itemscope='' itemtype='http://schema.org/Product' data-section-id='product-template' data-section-type='product' data-enable-history-state='true')
+      meta(itemprop='name' content='Robot-In-A-Can')
+      meta(itemprop='url' content='https://robotinacan.com/products/robot-in-a-can')
+      meta(itemprop='image' content='//cdn.shopify.com/s/files/1/1927/6949/products/canIII_800x.jpg')
+      .grid.product-single
+        .grid__item.medium-up--one-half
+          include product-photos.pug
+          // partial
+        .grid__item.medium-up--one-half
+          include product-info.pug 
+          // partial

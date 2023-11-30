@@ -1,0 +1,15 @@
+#shopify-section-1492275118730.shopify-section.index-section.index-section--flush
+  .newsletter-section
+    .page-width.text-center
+      .section-header.text-center
+        label.h2(for='Email') sign up now
+        p When the robots take over, you will be treated favourably.
+      form#contact_form.contact-form(method='post' action='https://robotinacan.com/contact#contact_form' accept-charset='UTF-8')
+        input(type='hidden' name='form_type' value='customer')
+        input(type='hidden' name='utf8' value='✓')
+        .input-group.password__input-group
+          input(type='hidden' name='contact[tags]' value='newsletter')
+          input#Email.input-group__field.newsletter__input(type='email' name='contact[email]' value='' placeholder='Email address' autocorrect='off' autocapitalize='off')
+          span.input-group__btn
+            button#Subscribe.btn.newsletter__submit(type='submit' name='commit')
+              span.newsletter__submit-text--large Subscribe
