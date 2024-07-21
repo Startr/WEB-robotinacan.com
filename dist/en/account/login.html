@@ -28,7 +28,7 @@
 <meta content="Cardboard WiFi robots in a can! Learn robotics, circuitry, coding, engineering, start inventing easily at a low cost! Let's build an environmentally-friendly, accessible, and authentic learning experience like none other! 
 
 " name="twitter:description"/>
-<link href="https://cdn.shopify.com/s/files/1/1927/6949/t/1/assets/theme.scss.css?770" media="all" rel="stylesheet" type="text/css"/>
+<link href="/css/theme.scss.css" media="all" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" media="all" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Nunito:800" media="all" rel="stylesheet" type="text/css"/>
 <!--[if (lte IE 9) ]><![endif]-->
@@ -55,7 +55,7 @@
   }
 }
 </style>
-<link href="https://cdn.shopify.com/s/files/1/1927/6949/t/1/assets/crowdfunder.scss.css?770" media="all" rel="stylesheet" type="text/css"/>
+<link href="/css/crowdfunder.scss.css" media="all" rel="stylesheet" type="text/css"/>
 <link href="login.html" hreflang="en" rel="alternate"/>
 <link href="/../en/account/login.html" hreflang="fr" rel="alternate"/>
 <link href="/en/account/login.html" hreflang="es" rel="alternate"/>
@@ -121,7 +121,7 @@
 <div class="grid__item small--one-half medium-up--one-quarter logo-align--left">
 <div class="h2 site-header__logo" itemscope="" itemtype="http://schema.org/Organization">
 <a class="site-header__logo-image" href="/index.html" itemprop="url">
-<img alt="Robot In A Can" itemprop="logo" src="/imgs/NewRobotLogo_190704_115x.png" srcset="https://cdn.shopify.com/s/files/1/1927/6949/files/NewRobotLogo_190704_115x.png 1x, https://cdn.shopify.com/s/files/1/1927/6949/files/NewRobotLogo_190704_115x@2x.png 2x"/>
+<img alt="Robot In A Can" itemprop="logo" src="/imgs/NewRobotLogo_190704_115x.png" srcset="https://cdn.shopify.com/s/files/1/1927/6949/files/NewRobotLogo_190704_115x.png 1x, /imgs/NewRobotLogo_190704_115x@2x.png 2x"/>
 </a>
 </div>
 </div>
@@ -201,7 +201,7 @@
         We've sent you an email with a link to update your password.
       </div>
 <div class="form-vertical" id="CustomerLoginForm">
-<form accept-charset="UTF-8" action="login.html" id="customer_login" method="post"><input name="form_type" type="hidden" value="customer_login"/><input name="utf8" type="hidden" value="✓"/>
+<form accept-charset="UTF-8" action="login.html" id="customer_login" method="get"><input name="form_type" type="hidden" value="customer_login"/><input name="utf8" type="hidden" value="✓"/>
 <h1 class="text-center">Login</h1>
 <label for="CustomerEmail">Email</label>
 <input autocapitalize="off" autocorrect="off" autofocus="" class="" id="CustomerEmail" name="customer[email]" type="email"/>
@@ -222,7 +222,7 @@
 <p>We will send you an email to reset your password.</p>
 </div>
 <div class="form-vertical">
-<form accept-charset="UTF-8" action="https://robotinacan.com/account/recover" method="post"><input name="form_type" type="hidden" value="recover_customer_password"/><input name="utf8" type="hidden" value="✓"/>
+<form accept-charset="UTF-8" action="https://robotinacan.com/account/recover" method="get"><input name="form_type" type="hidden" value="recover_customer_password"/><input name="utf8" type="hidden" value="✓"/>
 <label for="RecoverEmail">Email</label>
 <input autocapitalize="off" autocorrect="off" class="input-full" id="RecoverEmail" name="email" type="email" value=""/>
 <div class="text-center">
