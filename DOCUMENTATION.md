@@ -5,7 +5,7 @@ This package contains all of the original code ([src/](./src/)), and a custom bu
 
 ## Installation
 
-Ensure you have a recent version of [node & npm](https://nodejs.org/en/download/) or [yarn](https://yarnpkg.com/en/docs/install) installed.
+Ensure you have a recent version of [node & npm](https://nodejs.org/download/) or [yarn](https://yarnpkg.com/docs/install) installed.
 
 All of the following steps run on the command line within this directory. You can substitute `npm` for `yarn` depending on your preferences.
 

@@ -5,4 +5,4 @@ Robot in a Can home page
 All code published under the AGPL license 
 All conent published under CC BY-SA 4.0 
 
-© 2023, [Robot In A Can](https://robotinacan.com/en/) & [Startr LLC](https://startr.ca/)
+© 2023, [Robot In A Can](https://robotinacan.com/) & [Startr LLC](https://startr.ca/)
