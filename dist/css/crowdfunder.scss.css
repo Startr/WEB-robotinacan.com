@@ -14,14 +14,14 @@
     height: 24px;
     width: 100%;
     position: relative;
-    background-color: #fff;
+    --bgc: #fff;
     overflow: hidden;
     border: 1px solid #e5e5e7;
     border-radius: 4px; }
   .crowdfunder-widget .cf-meter span {
     display: block;
     height: 100%;
-    background-color: #586be9;
+    --bgc: #586be9;
     position: absolute;
     top: 0;
     left: 0;

@@ -115,7 +115,7 @@ html {
   *,
   :after,
   :before {
-    box-sizing: border-box;
+    --bxs: border-box;
   }
 
   font-size: 18px;
@@ -306,7 +306,7 @@ section {
   button,
   input,
   textarea {
-    transition: background-color var(--animation-duration) linear,
+    transition: --bgc var(--animation-duration) linear,
       border-color var(--animation-duration) linear,
       color var(--animation-duration) linear,
       transform var(--animation-duration) ease;
@@ -344,7 +344,7 @@ section {
     margin: 0.5rem 0.5rem 0.5rem 0;
     padding: calc(var(--x, 100) * 0.08px) calc(var(--x, 100) * 0.12px);
     width: 100%;
-    box-sizing: border-box;
+    --bxs: border-box;
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -359,7 +359,7 @@ section {
   input,
   select,
   textarea {
-    background-color: var(--background);
+    --bgc: var(--background);
     border: 1px solid var(--border);
     border-radius: var(--border-radius);
   }
@@ -383,7 +383,7 @@ section {
   textarea {
     margin-right: 0;
     width: 100%;
-    box-sizing: border-box;
+    --bxs: border-box;
     resize: vertical;
   }
 
@@ -412,7 +412,7 @@ section {
     padding-right: calc(var(--x, 100) * 0.28px);
     padding-left: calc(var(--x, 100) * 0.28px);
     width: auto;
-    background-color: var(--element-bg, var(--primary));
+    --bgc: var(--element-bg, var(--primary));
     line-height: inherit;
     color: var(--btn-c, var(--white));
     box-shadow: var(--button-shadow);
@@ -557,7 +557,7 @@ section {
   .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px;
+    --pt: 30px;
     height: 0;
     overflow: hidden;
   }
@@ -576,7 +576,7 @@ section {
     align-items: center;
     font-size: calc(var(--x, 100) * 0.008rem);
     color: var(--tag-c, var(--white));
-    background-color: var(--element-bg, var(--primary));
+    --bgc: var(--element-bg, var(--primary));
     width: auto;
     justify-content: center;
     padding: calc(var(--x, 100) * 0.02px) calc(var(--x, 100) * 0.0075em);
@@ -660,7 +660,7 @@ section {
   }
 
   ::selection {
-    background-color: var(--selection);
+    --bgc: var(--selection);
   }
 
   footer {
@@ -777,7 +777,7 @@ section {
 
   blockquote {
     border-left: 4px solid var(--primary);
-    background-color: #fff;
+    --bgc: #fff;
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     font-style: italic;
@@ -816,7 +816,7 @@ section {
   }
 
   mark {
-    background-color: var(--highlight);
+    --bgc: var(--highlight);
     border-radius: 2px;
     padding: 0 2px;
   }
@@ -887,7 +887,7 @@ section {
 
   .accent {
     color: var(--accent-c, var(--text-main));
-    background-color: var(--element-bg, var(--white));
+    --bgc: var(--element-bg, var(--white));
     border: var(--accent-border, 0);
     border-radius: var(--border-radius, 0);
     box-shadow: var(--accent-shadow, none);
@@ -922,7 +922,7 @@ section {
   }
 
   [style*="--bgc:"] {
-    background-color: var(--bgc) !important;
+    --bgc: var(--bgc) !important;
   }
 
   [style*="--bgi:"] {
@@ -946,7 +946,7 @@ section {
   }
 
   [style*="--hvr-bgc:"]:hover {
-    background-color: var(--hvr-bgc, var(--background-color));
+    --bgc: var(--hvr-bgc, var(----bgc));
   }
 
   [style*="--grad-top:"] {
@@ -1214,7 +1214,7 @@ section {
   }
 
   [style*="--bxs:"] {
-    box-sizing: var(--bxs) !important;
+    --bxs: var(--bxs) !important;
   }
 
   [style*="--p:"] {
@@ -1230,7 +1230,7 @@ section {
   }
 
   [style*="--pt:"] {
-    padding-top: var(--pt) !important;
+    --pt: var(--pt) !important;
   }
 
   [style*="--pb:"] {
@@ -1653,7 +1653,7 @@ section {
   }
 
   [style*="--bgc-sm:"] {
-    background-color: var(--bgc-sm) !important;
+    --bgc: var(--bgc-sm) !important;
   }
 
   [style*="--bgi-sm:"] {
@@ -1893,7 +1893,7 @@ section {
   }
 
   [style*="--pt-sm:"] {
-    padding-top: var(--pt-sm) !important;
+    --pt: var(--pt-sm) !important;
   }
 
   [style*="--pb-sm:"] {
@@ -2045,7 +2045,7 @@ section {
   }
 
   [style*="--bgc-md:"] {
-    background-color: var(--bgc-md) !important;
+    --bgc: var(--bgc-md) !important;
   }
 
   [style*="--bgi-md:"] {
@@ -2285,7 +2285,7 @@ section {
   }
 
   [style*="--pt-md:"] {
-    padding-top: var(--pt-md) !important;
+    --pt: var(--pt-md) !important;
   }
 
   [style*="--pb-md:"] {
@@ -2437,7 +2437,7 @@ section {
   }
 
   [style*="--bgc-lg:"] {
-    background-color: var(--bgc-lg) !important;
+    --bgc: var(--bgc-lg) !important;
   }
 
   [style*="--bgi-lg:"] {
@@ -2677,7 +2677,7 @@ section {
   }
 
   [style*="--pt-lg:"] {
-    padding-top: var(--pt-lg) !important;
+    --pt: var(--pt-lg) !important;
   }
 
   [style*="--pb-lg:"] {
@@ -2817,7 +2817,7 @@ section {
   }
 
   [style*="--bgc-xl:"] {
-    background-color: var(--bgc-xl) !important;
+    --bgc: var(--bgc-xl) !important;
   }
 
   [style*="--bgi-xl:"] {
@@ -3057,7 +3057,7 @@ section {
   }
 
   [style*="--pt-xl:"] {
-    padding-top: var(--pt-xl) !important;
+    --pt: var(--pt-xl) !important;
   }
 
   [style*="--pb-xl:"] {

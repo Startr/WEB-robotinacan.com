@@ -9,7 +9,7 @@ h1, .h1 {
   color: #2977bc; }
 
 div.newsletter-section {
-  background-color: #2977bc; }
+  --bgc: #2977bc; }
 
 div.newsletter-section label {
   color: white; }
@@ -18,7 +18,7 @@ div.newsletter-section p {
   color: white; }
 
 #MainContent {
-  padding-top: 0; }
+  --pt: 0; }
 
 .lead {
   font-size: 1.6em;
@@ -108,7 +108,7 @@ div.newsletter-section p {
 .slick-slider {
   position: relative;
   display: block;
-  box-sizing: border-box;
+  --bxs: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -303,7 +303,7 @@ div.newsletter-section p {
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  --bxs: border-box; }
 
 body {
   margin: 0; }
@@ -332,7 +332,7 @@ select {
   -webkit-text-size-adjust: 100%; }
 
 a {
-  background-color: transparent; }
+  --bgc: transparent; }
 
 b,
 strong {
@@ -1289,12 +1289,12 @@ textarea {
 /*================ #Basic Styles ================*/
 body,
 html {
-  background-color: white; }
+  --bgc: white; }
 
 .page-width {
   *zoom: 1;
   max-width: 1200px;
-  padding-top: 2.5em;
+  --pt: 2.5em;
   margin: 0 auto; }
   .page-width::after {
     content: '';
@@ -1303,10 +1303,10 @@ html {
 
 .main-content {
   display: block;
-  padding-top: 35px; }
+  --pt: 35px; }
   @media only screen and (min-width: 750px) {
     .main-content {
-      padding-top: 55px; } }
+      --pt: 55px; } }
 
 .section-header {
   margin-bottom: 35px; }
@@ -1693,11 +1693,11 @@ a {
   .btn[disabled] {
     cursor: default;
     opacity: 0.5;
-    background-color: #ff9f29;
+    --bgc: #ff9f29;
     color: #271c1c; }
 
 .btn--secondary {
-  background-color: white;
+  --bgc: white;
   color: #4d4d4d;
   border-color: #e8e9eb; }
 
@@ -1713,7 +1713,7 @@ a {
     padding-left: 50px;
     padding-right: 50px; } }
 .btn--link {
-  background-color: transparent;
+  --bgc: transparent;
   border: 0;
   margin: 0;
   color: #2977bc;
@@ -1801,7 +1801,7 @@ td {
   tfoot > .responsive-table__row:first-child {
     position: relative;
     margin-top: 10px;
-    padding-top: 55px; }
+    --pt: 55px; }
     .responsive-table__row + .responsive-table__row::after,
     tfoot > .responsive-table__row:first-child::after {
       content: '';
@@ -1877,7 +1877,7 @@ select {
   textarea[disabled],
   select[disabled] {
     cursor: default;
-    background-color: #f4f4f4;
+    --bgc: #f4f4f4;
     border-color: #f4f4f4; }
   input.input--error::-webkit-input-placeholder,
   textarea.input--error::-webkit-input-placeholder,
@@ -1940,13 +1940,13 @@ select {
   text-indent: 0.01px;
   text-overflow: '';
   cursor: pointer;
-  padding-top: 8px;
+  --pt: 8px;
   padding-left: 15px;
   padding-bottom: 8px;
   /*================ Hide the svg arrow in IE9 and below ================*/ }
   @media only screen and (min-width: 750px) {
     select {
-      padding-top: 10px;
+      --pt: 10px;
       padding-left: 18px;
       padding-bottom: 10px; } }
   .ie9 select {
@@ -2074,7 +2074,7 @@ textarea {
 .input-group__field,
 .input-group__btn .btn {
   height: 42px;
-  padding-top: 0;
+  --pt: 0;
   padding-bottom: 0; }
   @media only screen and (min-width: 750px) {
     .input-group__field,
@@ -2117,7 +2117,7 @@ textarea {
   display: block;
   white-space: nowrap; }
   .site-nav--centered .site-nav__link {
-    padding-top: 0; }
+    --pt: 0; }
   .site-nav__link .icon-chevron-down {
     width: 8px;
     height: 8px;
@@ -2327,7 +2327,7 @@ hr {
   transition: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1); }
   .drawer input[type="text"],
   .drawer textarea {
-    background-color: white;
+    --bgc: white;
     color: #2977bc; }
 
 .js-drawer-open {
@@ -2374,7 +2374,7 @@ hr {
   color: inherit;
   font-size: 1em; }
   .drawer__close-button:active, .drawer__close-button:focus {
-    background-color: rgba(0, 0, 0, 0.6); }
+    --bgc: rgba(0, 0, 0, 0.6); }
 
 .grid--view-items {
   overflow: auto;
@@ -2553,9 +2553,9 @@ hr {
           height: 12px; } }
     .slick-slider .slick-dots li button::before {
       text-indent: -9999px;
-      background-color: transparent;
+      --bgc: transparent;
       border-radius: 100%;
-      background-color: currentColor;
+      --bgc: currentColor;
       width: 10px;
       height: 10px;
       opacity: 0.4;
@@ -2571,14 +2571,14 @@ hr {
 
 /*================ Index sections ================*/
 .index-section {
-  padding-top: 35px;
+  --pt: 35px;
   padding-bottom: 35px; }
   @media only screen and (min-width: 750px) {
     .index-section {
-      padding-top: 55px;
+      --pt: 55px;
       padding-bottom: 0; } }
   .index-section:first-child {
-    padding-top: 0;
+    --pt: 0;
     border-top: 0; }
   .index-section:last-child {
     padding-bottom: 0; }
@@ -2808,7 +2808,7 @@ h1.product-single__title, .product-single__title.h1 {
   margin: 0 auto; }
 
 .zoomImg {
-  background-color: white; }
+  --bgc: white; }
 
 @media only screen and (min-width: 750px) {
   .product-single__thumbnails {
@@ -2827,7 +2827,7 @@ h1.product-single__title, .product-single__title.h1 {
 
 @media only screen and (max-width: 749px) {
   .template-product .main-content {
-    padding-top: 22px; }
+    --pt: 22px; }
 
   .thumbnails-slider--active .product-single__thumbnails {
     display: none; }
@@ -2925,7 +2925,7 @@ h1.product-single__title, .product-single__title.h1 {
   margin-bottom: 17.5px; }
 
 .blog--list-view .pagination {
-  padding-top: 0; }
+  --pt: 0; }
 
 /*================ Cart page ================*/
 .cart th,
@@ -2961,7 +2961,7 @@ h1.product-single__title, .product-single__title.h1 {
   padding-right: 5px; }
   @media only screen and (max-width: 749px) {
     .cart__qty-input {
-      padding-top: 2px;
+      --pt: 2px;
       padding-bottom: 2px; } }
 
 .cart__edit {
@@ -2996,7 +2996,7 @@ h1.product-single__title, .product-single__title.h1 {
       display: inline-block; } }
 
 .cart__savings {
-  padding-top: 18px; }
+  --pt: 18px; }
 
 .cart__savings-amount {
   padding-left: 27.5px; }
@@ -3007,7 +3007,7 @@ h1.product-single__title, .product-single__title.h1 {
       display: inline-block; } }
 
 .cart__footer {
-  padding-top: 35px; }
+  --pt: 35px; }
 
 .cart__update--large {
   margin-right: 10px; }
@@ -3074,7 +3074,7 @@ h1.product-single__title, .product-single__title.h1 {
     display: block; }
   .cart .cart__update-wrapper {
     display: none;
-    padding-top: 0;
+    --pt: 0;
     padding-bottom: 22px; }
 
   .cart__update--show td {
@@ -3152,7 +3152,7 @@ h1.product-single__title, .product-single__title.h1 {
     border: 0; }
 
   .cart-message {
-    padding-top: 20px; }
+    --pt: 20px; }
 
   .cart__qty {
     padding: 0 10px; }
@@ -3189,7 +3189,7 @@ h1.product-single__title, .product-single__title.h1 {
 
 /*================ MODULES ================*/
 .site-header {
-  background-color: white;
+  --bgc: white;
   position: relative;
   padding: 0 55px; }
   @media only screen and (max-width: 749px) {
@@ -3198,7 +3198,7 @@ h1.product-single__title, .product-single__title.h1 {
       padding: 0; } }
   @media only screen and (min-width: 750px) {
     .site-header.logo--center {
-      padding-top: 30px; } }
+      --pt: 30px; } }
 
 .site-header__logo {
   margin: 15px 0; }
@@ -3365,7 +3365,7 @@ h1.product-single__title, .product-single__title.h1 {
       padding: 10px 55px; } }
 
 .article--listing {
-  padding-top: 55px;
+  --pt: 55px;
   margin-bottom: 55px; }
 
 .article__title {
@@ -3437,7 +3437,7 @@ h1.product-single__title, .product-single__title.h1 {
   text-align: center;
   list-style: none;
   font-size: 0.83333em;
-  padding-top: 55px; }
+  --pt: 55px; }
   .pagination li {
     display: inline-block; }
   .pagination .icon {
@@ -3509,7 +3509,7 @@ h1.product-single__title, .product-single__title.h1 {
 
 .search-header__input,
 .search-bar__input {
-  background-color: transparent;
+  --bgc: transparent;
   border-radius: 2px;
   color: #2977bc;
   border-color: transparent;
@@ -3894,7 +3894,7 @@ h1.product-single__title, .product-single__title.h1 {
   .slideshow__link .slideshow__text-wrap {
     cursor: inherit; }
   .slideshow__slide--has-background-video .slideshow__text-wrap {
-    padding-top: 165px; }
+    --pt: 165px; }
   .video-is-playing .slideshow__text-wrap {
     display: none; }
   .slideshow__slide.video-is-paused .slideshow__text-wrap {
@@ -4312,7 +4312,7 @@ h1.product-single__title, .product-single__title.h1 {
       order: 1; } }
 
 .feature-row__text {
-  padding-top: 35px;
+  --pt: 35px;
   padding-bottom: 35px; }
   @media only screen and (max-width: 749px) {
     .feature-row__text {
@@ -4388,7 +4388,7 @@ h1.product-single__title, .product-single__title.h1 {
   z-index: 2; }
 
 .hero__btn {
-  background-color: #ff9f29;
+  --bgc: #ff9f29;
   color: #271c1c;
   margin-top: 27.5px; }
 
@@ -4737,10 +4737,10 @@ h1.product-single__title, .product-single__title.h1 {
   text-align: right; }
 
 .newsletter-section {
-  padding-top: 55px; }
+  --pt: 55px; }
 
 .index-section--newsletter-background {
-  background-color: rgba(26, 48, 58, 0.1); }
+  --bgc: rgba(26, 48, 58, 0.1); }
 
 .home-kickstarter {
   margin-bottom: 60px;
@@ -4786,7 +4786,7 @@ h1.product-single__title, .product-single__title.h1 {
     .kickstarter__meta {
       margin: 30px auto; }
       .kickstarter__meta ul {
-        padding-top: 30px; } }
+        --pt: 30px; } }
   .kickstarter__meta ul {
     margin: 0;
     *zoom: 1; }
@@ -4872,7 +4872,7 @@ h1.product-single__title, .product-single__title.h1 {
         .kickstarter__meta.kickstarter--pie .kickstarter__graphic.pie {
           display: none; } }
   .kickstarter__meta.kickstarter--bar {
-    padding-top: 45px;
+    --pt: 45px;
     margin-top: 55px; }
     .kickstarter__meta.kickstarter--bar strong {
       font-size: 2.22222em; }
@@ -4880,7 +4880,7 @@ h1.product-single__title, .product-single__title.h1 {
       margin-top: 2px; }
     @media only screen and (min-width: 750px) {
       .kickstarter__meta.kickstarter--bar {
-        padding-top: 0; } }
+        --pt: 0; } }
     @media only screen and (max-width: 749px) {
       .kickstarter__meta.kickstarter--bar strong {
         font-size: 1.11111em; } }
@@ -4907,7 +4907,7 @@ h1.product-single__title, .product-single__title.h1 {
   margin-right: auto; }
 
 #shopify-section-header {
-  background-color: #fff; }
+  --bgc: #fff; }
 
 #shopify-section-header .site-header {
-  background-color: #fff; }
+  --bgc: #fff; }
