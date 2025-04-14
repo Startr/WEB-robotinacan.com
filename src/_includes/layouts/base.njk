@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="ie9 no-js" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+        <meta content="width=device-width,initial-scale=1" name="viewport"/>
+        <meta content="#ff9f29" name="theme-color"/>
+        {% if canonical %}
+            <link href="{{ canonical | url }}" rel="canonical"/>
+        {% endif %}
+        <title>
+            {% if title %}{{ title }} - {% endif %}Robot In A Can
+  </title>
+
+        <!-- Social Meta Tags -->
+        <meta content="Robot In A Can" property="og:site_name"/>
+        <meta content="{{ page.url | url }}" property="og:url"/>
+        <meta content="{% if title %}{{ title }}{% else %}Robot In A Can{% endif %}" property="og:title"/>
+        <meta content="website" property="og:type"/>
+        <meta content="{% if description %}{{ description }}{% else %}Cardboard WiFi robots in a can! Learn robotics, circuitry, coding, engineering, start inventing easily at a low cost! Let's build an environmentally-friendly, accessible, and authentic learning experience like none other!{% endif %}" property="og:description"/>
+        <meta content="@robotinacan" name="twitter:site"/>
+        <meta content="summary_large_image" name="twitter:card"/>
+        <meta content="{% if title %}{{ title }}{% else %}Robot In A Can{% endif %}" name="twitter:title"/>
+        <meta content="{{ description | default("Cardboard WiFi robots in a can! Learn robotics, circuitry, coding, engineering, start inventing easily at a low cost! Build an environmentally-friendly, accessible, and authentic learning experience like none other!") }}" name="twitter:description"/>
+
+        <!-- Stylesheets -->
+        <link href="{{ '/css/theme.scss.css' | url }}" media="all" rel="stylesheet" type="text/css"/>
+        <link ref="stylesheet" href="//startr.style/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round|Itim&amp;display=swap" rel="stylesheet"/>
+
+        {% if customCSS %}
+            <link rel="stylesheet" href="{{ customCSS | url }}">
+        {% endif %}
+        <script type="text/javascript">
+            /** This section is only needed once per page if manually copying **/
+            if (typeof MauticSDKLoaded == 'undefined') {
+                var MauticSDKLoaded = true;
+                var head = document.getElementsByTagName('head')[0];
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://nota.startr.cloud/media/js/mautic-form.js?v09d4302a';
+                script.onload = function () {
+                    MauticSDK.onLoad();
+                };
+                head.appendChild(script);
+                var MauticDomain = 'https://nota.startr.cloud';
+                var MauticLang = {
+                    'submittingMessage': "Please wait..."
+                }
+            } else if (typeof MauticSDK != 'undefined') {
+                MauticSDK.onLoad();
+            }
+        </script>
+
+    </head>
+    <body class="{% if templateClass %}{{ templateClass }}{% else %}template-page{% endif %}">
+        <a class="in-page-link visually-hidden skip-link" href="#MainContent">Skip to content</a>
+
+        {% include "partials/search-drawer.njk" %}
+
+        <div class="shopify-section" id="shopify-section-header">
+            {% include "partials/header.njk" %}
+        </div>
+
+        <div class="page-container" id="PageContainer">
+            <main class="main-content" id="MainContent" role="main">
+                {{ content | safe }}
+            </main>
+
+            <div class="shopify-section" id="shopify-section-footer">
+                {% include "partials/footer.njk" %}
+            </div>
+        </div>
+
+        {% include "partials/language-switcher.njk" %}
+
+        <!-- Scripts -->
+        <script src="{{ '/feather.min.js' | url }}"></script>
+        <script src="{{ '/script.js' | url }}"></script>
+        {% if customJS %}
+            <script src="{{ customJS | url }}"></script>
+        {% endif %}
+        <script>
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+        </script>
+    </body>
+</html>

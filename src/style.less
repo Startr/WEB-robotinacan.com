@@ -50,7 +50,8 @@
 @font_family_1: -apple-system, BlinkMacSystemFont, Avenir, Avenir Next, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 // Row and column flexbox setup
-.row, .columns {
+.row,
+.columns {
 
   a-column,
   .column {
@@ -110,9 +111,13 @@
 }
 
 html {
-  *, :after,:before {
+
+  *,
+  :after,
+  :before {
     box-sizing: border-box;
   }
+
   font-size: 18px;
   line-height: 1.6;
   font-weight: 400;
@@ -151,7 +156,9 @@ body {
   }
 }
 
-.site-header, .hero, .site-footer {
+.site-header,
+.hero,
+.site-footer {
   z-index: 2;
   display: flex;
   position: relative;
@@ -206,7 +213,12 @@ p {
   font-family: "Libre Baskerville", droid-serif, serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.6;
   font-family: Nunito, Varela Round, sans-serif;
   font-weight: 800;
