@@ -9,9 +9,9 @@ div(itemprop='offers' itemscope='' itemtype='http://schema.org/Offer')
     span.price.sale
       span#ProductPrice-product-template(itemprop='price' content='60.0') $60.00 
       span.product-price__sale-label.product-price__sale-label-product-template Sale
-  form.product-form.product-form-product-template(action='https://robotinacan.com/cart/add' method='post' enctype='multipart/form-data' data-section='product-template')
+  form.product-form.product-form-product-template(action='https://robotinacan.com/cart/add' method='post' enctype='multipart/form-data' data-section='product-template' style='--d: flex;--m: 1em auto; --fw:nowrap')
     select#ProductSelect-product-template.product-form__variants.no-js(name='id' data-section='product-template')
       option(selected='' value='33521842699') Default Title
-    .product-form__item.product-form__item--submit
-      button#AddToCart-product-template.btn.product-form__cart-submit.product-form__cart-submit--small(type='submit' name='add')
-        span#AddToCartText-product-template Add to cart
+    button#AddToCart-product-template.btn.product-form__cart-submit.product-form__cart-submit--small(type='submit' name='add' disabled)
+      span#AddToCartText-product-template Out of Stock
+      
