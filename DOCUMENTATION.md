@@ -50,7 +50,7 @@ yarn serve
 |  |-- script.(js|ts|coffee|...) - The raw JavaScript input, or preprocessor equivalent
 |
 |-- /dist/ - The compiled output after running `npm run build`
-|  |-- index.html
+|  |-- 
 |  |-- script.js
 |  |-- style.css
 ```
