@@ -120,12 +120,12 @@ html {
 
   font-size: 18px;
   line-height: 1.6;
-  font-weight: 400;
+  --weight: 400;
   text-size-adjust: 100%;
   color: @color_1;
   background: var(--background-body);
   text-rendering: optimizeLegibility;
-  font-family: @font_family_1;
+  --ff: @font_family_1;
 }
 
 // Three column layout with .--fullwidth breaksout of the wrappers.
@@ -183,7 +183,7 @@ body {
 
         a {
           color: var(--blue);
-          text-decoration: none;
+          --td: none;
 
           &:hover {
             color: var(--primary);
@@ -201,7 +201,7 @@ body {
 
 a {
   color: var(--links);
-  text-decoration: none;
+  --td: none;
   transition: var(--transition);
 
   &:hover {
@@ -210,7 +210,7 @@ a {
 }
 
 p {
-  font-family: "Libre Baskerville", droid-serif, serif;
+  --ff: "Libre Baskerville", droid-serif, serif;
 }
 
 h1,
@@ -220,8 +220,8 @@ h4,
 h5,
 h6 {
   line-height: 1.6;
-  font-family: Nunito, Varela Round, sans-serif;
-  font-weight: 800;
+  --ff: Nunito, Varela Round, sans-serif;
+  --weight: 800;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -291,7 +291,7 @@ section {
   var {
     color: var(--variable);
     font-style: normal;
-    font-family: monospace;
+    --ff: monospace;
   }
 
   kbd {
@@ -338,7 +338,7 @@ section {
   select,
   textarea {
     color: var(--form-text);
-    font-family: inherit;
+    --ff: inherit;
     font-size: calc(var(--x, 100) * 1%);
     position: relative;
     margin: 0.5rem 0.5rem 0.5rem 0;
@@ -536,7 +536,7 @@ section {
 
   legend {
     font-size: 0.9em;
-    font-weight: 600;
+    --weight: 600;
   }
 
   fieldset {
@@ -551,7 +551,7 @@ section {
   fieldset>legend:first-of-type {
     padding: 0 0.5rem;
     font-size: 1.1rem;
-    font-weight: 400;
+    --weight: 400;
   }
 
   .video-container {
@@ -728,7 +728,7 @@ section {
   h4,
   h5,
   h6 {
-    font-weight: 400;
+    --weight: 400;
     line-height: 1.3em;
     margin: var(--heading-margin);
     color: var(--text-c, inherit);
@@ -766,13 +766,13 @@ section {
 
   a {
     color: var(--links);
-    text-decoration: none;
+    --td: none;
   }
 
   b,
   strong,
   th {
-    font-weight: 700;
+    --weight: 700;
   }
 
   blockquote {
@@ -804,7 +804,7 @@ section {
   }
 
   dt {
-    font-weight: 700;
+    --weight: 700;
   }
 
   dd {
@@ -1262,7 +1262,7 @@ section {
   }
 
   [style*="--ff:"] {
-    font-family: var(--ff) !important;
+    --ff: var(--ff) !important;
   }
 
   [style*="--size:"] {
@@ -1274,7 +1274,7 @@ section {
   }
 
   [style*="--weight:"] {
-    font-weight: var(--weight) !important;
+    --weight: var(--weight) !important;
   }
 
   [style*="--ls:"] {
@@ -1302,8 +1302,8 @@ section {
   }
 
   [style*="--td:"] {
-    -webkit-text-decoration: var(--td) !important;
-    text-decoration: var(--td) !important;
+    -webkit---td: var(--td) !important;
+    --td: var(--td) !important;
   }
 
   [style*="--ts:"] {
