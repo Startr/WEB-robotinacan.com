@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const sectionizePlugin = require("./_plugins/eleventy-plugin-sectionize");
 
 module.exports = function(eleventyConfig) {
   // Add date filter

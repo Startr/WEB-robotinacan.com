@@ -5,19 +5,21 @@
   "license": "MIT",
   "homepage": "https://codepen.io/openco/pen/bGKgadB",
   "scripts": {
-    "start": "cd src && bunx @11ty/eleventy --serve --output=../dist",
-    "admin": "npx decap-server & cd src && bunx @11ty/eleventy --serve --output=../dist",
-    "build": "cd src && bunx @11ty/eleventy --output=../dist",
-    "buildfresh": "rm -rf dist && mkdir dist && cd src && bunx @11ty/eleventy --output=../dist",
-    "srvsrc": "cd src && python -m http.server 8000 && cd .."
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd src && npx @11ty/eleventy --serve --output=../dist",
+    "build": "cd src && npx @11ty/eleventy --output=../dist",
+    "buildfresh": "rm -rf dist && mkdir dist && cd src && npx @11ty/eleventy --output=../dist",
+    "srvsrc": "cd src && python -m http.server 8000 && cd ..",
+    "setup": "cd utils && pipenv install",
+    "unstylish": "cd utils && pipenv run ./_unstylish.py ../src/",
+    "markdown": "cd utils && pipenv run ./_markdown.py ../src/",
+    "startstartr": "cd startr_src && npx @11ty/eleventy --serve --output=../dist",
+    "buildstartr": "cd startr_src && npx @11ty/eleventy --output=../dist",
+    "buildfreshstartr": "rm -rf dist && mkdir dist && cd startr_src && npx @11ty/eleventy --output=../dist"
   },
-  "config": {
-    "srcDir": "src/",
-    "distDir": "dist/"
-  },
-  "browserslist": [
-    "last 5 version"
-  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.1",
@@ -25,11 +27,12 @@
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "luxon": "^3.6.1",
-    "markdown-it-anchor": "^8.6.7"
+    "luxon": "^3.3.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.0.0",
+    "markdown-it-attrs": "^4.1.6"
   },
   "dependencies": {
-    "markdown-it-attrs": "^4.1.6",
-    "feather-icons": "^4.29.0"
+    "gray-matter": "^4.0.3"
   }
 }
