@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+templateClass: template-article
+---
+
+<article class="page-width" itemscope="" itemtype="http://schema.org/Article">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="section-header text-center">
+        <h1 class="article__title">{{ title }}</h1>
+        <span class="article__author">by {{ author }}</span>
+        <span class="article__date">
+          <time datetime="{{ date }}">{{ date }}</time>
+        </span>
+      </div>
+
+      <div class="rte" itemprop="articleBody">
+        {{ content | videoThumbs | safe }}
+      </div>
+
+      {% include "partials/social-sharing.njk" %}
+    </div>
+  </div>
+</article>
+
+<div class="text-center return-link-wrapper">
+  <a class="btn btn--secondary btn--has-icon-before return-link" href="/blog/">
+    <svg aria-hidden="true" class="icon icon--wide icon-arrow-left" focusable="false" role="presentation" viewbox="0 0 20 8">
+      <path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#000" fill-rule="evenodd"></path>
+    </svg>
+    Back to News
+  </a>
+</div>

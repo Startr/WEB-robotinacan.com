@@ -1,7 +1,11 @@
 const { DateTime } = require("luxon");
 const sectionizePlugin = require("./_plugins/eleventy-plugin-sectionize");
+const dateFilters = require("./_includes/filters/date-filters");
 
 module.exports = function(eleventyConfig) {
+  // Register the video thumbnail plugin (relative to src, since 11ty runs in src)
+  eleventyConfig.addPlugin(require("./_plugins/eleventy-plugin-video-thumb"));
+
   // Add date filter
   eleventyConfig.addFilter("date", function(date, format) {
     if (!(date instanceof Date)) {
@@ -18,6 +22,24 @@ module.exports = function(eleventyConfig) {
   // Register other built-in filters that might be useful
   eleventyConfig.addFilter("formatDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: "utc"}).toFormat("yyyy-LL-dd");
+  });
+  
+  // Add blog-specific date filters
+  eleventyConfig.addFilter("dateIso", dateFilters.dateIso);
+  eleventyConfig.addFilter("dateDisplay", dateFilters.dateDisplay);
+  
+  // Configure Markdown
+  eleventyConfig.addPassthroughCopy("src/imgs");
+  
+  // Set default layout for markdown blog posts
+  eleventyConfig.addCollection("blog", function(collection) {
+    return collection.getFilteredByGlob("src/blog/news/*.md").map(function(item) {
+      // Set the default layout for blog posts if not specified
+      if (!item.data.layout) {
+        item.data.layout = "layouts/blog.njk";
+      }
+      return item;
+    });
   });
   
   // Configure template files with custom file extension

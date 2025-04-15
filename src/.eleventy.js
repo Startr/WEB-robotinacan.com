@@ -1,4 +1,3 @@
-const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
@@ -6,6 +5,10 @@ const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
+const sectionizePlugin = require("./_plugins/eleventy-plugin-sectionize");
+const dateFilters = require("./_includes/filters/date-filters");
+//             const relativePath = inputPath.replace(/^src\//, "");
+//             return `/${relativePath}`;
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
@@ -30,6 +33,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBundle);
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
+	eleventyConfig.addPlugin(require("./_plugins/eleventy-plugin-video-thumb"));
 	
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
