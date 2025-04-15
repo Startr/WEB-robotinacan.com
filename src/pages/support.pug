@@ -10,24 +10,29 @@ eleventyNavigation:
 include ../partials/head.pug
 
 main#MainContent.main-content(role='main')
-  .page-width.index-section(style='--m: 6em auto; --d: flex; --fw: wrap; --jc: center; gap: 0.2em;')
-      .custom__item(style='--w:49.5%;')
+  // Use startr.style grid layout: 1 column default, 2 columns medium+, set gap and margin
+  .page-width.index-section(style='--d: grid; --gtc: repeat(1, 1fr); --gtc-md: repeat(2, 1fr); --gg: 0.2em; --m: 6em auto;')
+      // Item 1 (no style changes needed on this element)
+      .custom__item
         a(href='https://rawcdn.githack.com/opencoca/eBrain-Snap/fd4ac807c1370d12ffbad5fe985d28f0fe621dda/app/Guidbook/Guidebook.pdf')
-          .custom__item-inner.custom__item-inner--html.btn(style='--bgc: #2977bc; --c: white; --p: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center;')
+          box-sizing.btn(style='--bgc: #2977bc; --c: white; --p: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center; --h:100%')
             .medium-up--text-center
               h4.h3 Instruction Manual
               .rte-setting
                 p(style='color: white;') Follow this guide book to get started with your kit!
-      .custom__item(style='--w:49.5%;')
+      // Item 2 (no style changes needed on this element)
+      .custom__item
         a(href='https://github.com/Robot-In-A-Can/eBrain-Snap/archive/master.zip')
-          .custom__item-inner.custom__item-inner--html.btn(style='--bgc: #223740; color: white; padding: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center;')
+          box-sizing.btn(style='--bgc: #223740; --c: white; --p: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center; --h:100%')
             .medium-up--text-center
               h4.h3 Download Snap!
               .rte-setting
                 p(style='color: white;') Download our custom Snap! Software for more advanced coding.
-      .custom__item(style='--w:100%;')
+      // Item 3: Span 2 columns on medium screens and up
+      .custom__item(style='--gc-md: span 2;')
         a(href='/../../../forum')
-          .custom__item-inner.custom__item-inner--html.btn(style='padding: 4em; --w: 100%; --minh: 16em; --d: flex; --fd: column; --jc: center;')
+          // Removed redundant --w: 100% as grid handles width
+          box-sizing.btn(style='--p: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center; --h:100%')
             .medium-up--text-center
               h4.h3 Forum and FAQ!
               .rte-setting
