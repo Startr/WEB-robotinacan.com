@@ -10,24 +10,24 @@ eleventyNavigation:
 include ../partials/head.pug
 
 main#MainContent.main-content(role='main')
-  .page-width.index-section(style='--m: 6em auto; --d: flex; --fw: wrap; --jc: center;')
-      .custom__item(style='--w:50%;')
+  .page-width.index-section(style='--m: 6em auto; --d: flex; --fw: wrap; --jc: center; gap: 0.2em;')
+      .custom__item(style='--w:49.5%;')
         a(href='https://rawcdn.githack.com/opencoca/eBrain-Snap/fd4ac807c1370d12ffbad5fe985d28f0fe621dda/app/Guidbook/Guidebook.pdf')
-          .custom__item-inner.custom__item-inner--html.btn(style='--bgc: #2977bc; color: white; padding: 4em;')
+          .custom__item-inner.custom__item-inner--html.btn(style='--bgc: #2977bc; --c: white; --p: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center;')
             .medium-up--text-center
               h4.h3 Instruction Manual
               .rte-setting
                 p(style='color: white;') Follow this guide book to get started with your kit!
-      .custom__item(style='--w:50%;')
+      .custom__item(style='--w:49.5%;')
         a(href='https://github.com/Robot-In-A-Can/eBrain-Snap/archive/master.zip')
-          .custom__item-inner.custom__item-inner--html.btn(style='--bgc: #223740; color: white; padding: 4em;')
+          .custom__item-inner.custom__item-inner--html.btn(style='--bgc: #223740; color: white; padding: 4em; --minh: 16em; --d: flex; --fd: column; --jc: center;')
             .medium-up--text-center
               h4.h3 Download Snap!
               .rte-setting
                 p(style='color: white;') Download our custom Snap! Software for more advanced coding.
       .custom__item(style='--w:100%;')
         a(href='/../../../forum')
-          .custom__item-inner.custom__item-inner--html.btn(style='padding: 4em;')
+          .custom__item-inner.custom__item-inner--html.btn(style='padding: 4em; --w: 100%; --minh: 16em; --d: flex; --fd: column; --jc: center;')
             .medium-up--text-center
               h4.h3 Forum and FAQ!
               .rte-setting
